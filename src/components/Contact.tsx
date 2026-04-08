@@ -104,36 +104,36 @@ const Contact: React.FC = () => {
           </div>
 
           {/* Right: Contact Form */}
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-2xl">
-            <p className="font-cond text-2xl font-bold text-primary-dark dark:text-blue-300 mb-2">
-              {lang === 'ar' ? 'اطلب خدمة' : 'Order a Service'}
+          <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-2xl border border-gray-100 dark:border-gray-700">
+            <p className="font-cond text-2xl font-bold text-primary-dark dark:text-white mb-2">
+              {lang === 'ar' ? 'اطلب الخدمة' : 'Request Service'}
             </p>
-            <p className="font-arabic text-base text-gray-600 dark:text-gray-300 mb-6">
-              {lang === 'ar' ? 'اطلب خدمة أو احجز استشارة مجانية' : 'Request a service or book a free consultation'}
+            <p className="text-gray-600 dark:text-gray-400 text-sm mb-6">
+              {lang === 'ar' ? 'ملء النموذج واحصل على رد خلال ساعة' : 'Fill the form and get a response within 1 hour'}
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-xs font-bold uppercase text-gray-600 dark:text-gray-400 mb-2">
+                  <label className="block text-xs font-bold uppercase text-gray-600 dark:text-gray-300 mb-2 tracking-wide">
                     {lang === 'ar' ? 'الاسم' : 'Name'} *
                   </label>
-                  <input type="text" name="name" value={formData.name} onChange={handleChange} required placeholder={lang === 'ar' ? 'اسمك الكامل' : 'Your full name'} className="w-full border-2 border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded p-3 focus:border-primary dark:focus:border-blue-400 outline-none" />
+                  <input type="text" name="name" value={formData.name} onChange={handleChange} required placeholder={lang === 'ar' ? 'أدخل اسمك' : 'Your name'} className="w-full border-2 border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg p-3 focus:border-primary dark:focus:border-blue-400 focus:ring-2 focus:ring-primary focus:ring-opacity-10 outline-none transition-all text-sm" />
                 </div>
                 <div>
-                  <label className="block text-xs font-bold uppercase text-gray-600 dark:text-gray-400 mb-2">
+                  <label className="block text-xs font-bold uppercase text-gray-600 dark:text-gray-300 mb-2 tracking-wide">
                     {lang === 'ar' ? 'الهاتف' : 'Phone'} *
                   </label>
-                  <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required placeholder="+966" className="w-full border-2 border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded p-3 focus:border-primary dark:focus:border-blue-400 outline-none" />
+                  <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required placeholder="+966..." className="w-full border-2 border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg p-3 focus:border-primary dark:focus:border-blue-400 focus:ring-2 focus:ring-primary focus:ring-opacity-10 outline-none transition-all text-sm" />
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-bold uppercase text-gray-600 dark:text-gray-400 mb-2">
-                  {lang === 'ar' ? 'الخدمة المطلوبة' : 'Service Needed'} *
+                <label className="block text-xs font-bold uppercase text-gray-600 dark:text-gray-300 mb-2 tracking-wide">
+                  {lang === 'ar' ? 'الخدمة' : 'Service'} *
                 </label>
-                <select name="service" value={formData.service} onChange={handleChange} required className="w-full border-2 border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded p-3 focus:border-primary dark:focus:border-blue-400 outline-none">
-                  <option value="">{lang === 'ar' ? '-- اختر الخدمة --' : '-- Select a service --'}</option>
+                <select name="service" value={formData.service} onChange={handleChange} required className="w-full border-2 border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg p-3 focus:border-primary dark:focus:border-blue-400 focus:ring-2 focus:ring-primary focus:ring-opacity-10 outline-none transition-all text-sm">
+                  <option value="">{lang === 'ar' ? '-- اختر الخدمة --' : '-- Select service --'}</option>
                   {services.map(group => (
                     <optgroup key={group.group} label={group.group}>
                       {group.items.map(item => (
@@ -145,29 +145,29 @@ const Contact: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-xs font-bold uppercase text-gray-600 dark:text-gray-400 mb-2">
+                <label className="block text-xs font-bold uppercase text-gray-600 dark:text-gray-300 mb-2 tracking-wide">
                   {lang === 'ar' ? 'نوع الاستشارة' : 'Consultation Type'} *
                 </label>
-                <select name="consultation" value={formData.consultation} onChange={handleChange} required className="w-full border-2 border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded p-3 focus:border-primary dark:focus:border-blue-400 outline-none">
-                  <option value={lang === 'ar' ? 'زيارة موقع مجانية' : 'Free On-Site Visit'}>{lang === 'ar' ? 'زيارة موقع مجانية' : 'Free On-Site Visit'}</option>
-                  <option value={lang === 'ar' ? 'مكالمة هاتفية مجانية' : 'Free Phone Call'}>{lang === 'ar' ? 'مكالمة هاتفية مجانية' : 'Free Phone Call'}</option>
-                  <option value={lang === 'ar' ? 'اجتماع أونلاين' : 'Free Online Meeting'}>{lang === 'ar' ? 'اجتماع أونلاين' : 'Free Online Meeting'}</option>
+                <select name="consultation" value={formData.consultation} onChange={handleChange} required className="w-full border-2 border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg p-3 focus:border-primary dark:focus:border-blue-400 focus:ring-2 focus:ring-primary focus:ring-opacity-10 outline-none transition-all text-sm">
+                  <option value={lang === 'ar' ? 'زيارة موقع' : 'Site Visit'}>{lang === 'ar' ? 'زيارة موقع مجانية' : 'Free Site Visit'}</option>
+                  <option value={lang === 'ar' ? 'اتصال هاتفي' : 'Phone Call'}>{lang === 'ar' ? 'اتصال هاتفي مجاني' : 'Free Phone Call'}</option>
+                  <option value={lang === 'ar' ? 'اجتماع أونلاين' : 'Online'}>{lang === 'ar' ? 'اجتماع أونلاين مجاني' : 'Free Online Meeting'}</option>
                 </select>
               </div>
 
               <div>
-                <label className="block text-xs font-bold uppercase text-gray-600 dark:text-gray-400 mb-2">
-                  {lang === 'ar' ? 'تفاصيل المشروع' : 'Tell Us About Your Project'}
+                <label className="block text-xs font-bold uppercase text-gray-600 dark:text-gray-300 mb-2 tracking-wide">
+                  {lang === 'ar' ? 'التفاصيل' : 'Tell Us About Your Project'}
                 </label>
-                <textarea name="message" value={formData.message} onChange={handleChange} placeholder={lang === 'ar' ? 'صف مشروعك بإيجاز...' : 'Describe briefly...'} rows={4} className="w-full border-2 border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded p-3 focus:border-primary dark:focus:border-blue-400 outline-none resize-none"></textarea>
+                <textarea name="message" value={formData.message} onChange={handleChange} placeholder={lang === 'ar' ? 'صف احتياجاتك...' : 'Describe your needs...'} rows={4} className="w-full border-2 border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg p-3 focus:border-primary dark:focus:border-blue-400 focus:ring-2 focus:ring-primary focus:ring-opacity-10 outline-none resize-none transition-all text-sm"></textarea>
               </div>
 
-              <button type="submit" className="w-full bg-gold dark:bg-yellow-500 text-primary-dark dark:text-gray-900 py-4 rounded font-cond text-lg font-bold uppercase hover:bg-yellow-400 dark:hover:bg-yellow-600 transition">
-                🚀 {lang === 'ar' ? 'أرسل واحصل على استشارتي المجانية' : 'Submit & Get My Free Consultation'}
+              <button type="submit" className="w-full bg-gold dark:bg-yellow-500 text-primary-dark dark:text-gray-900 py-4 rounded-lg font-cond text-base font-bold uppercase hover:bg-yellow-300 dark:hover:bg-yellow-600 transition-all transform hover:shadow-lg mt-6">
+                🚀 {lang === 'ar' ? 'أرسل الآن' : 'Send Request'}
               </button>
-              <p className="text-center text-xs text-gray-600 dark:text-gray-400">
-                <span className="text-green font-bold">✓</span> {lang === 'ar' ? 'نرد خلال ساعة واحدة' : 'We respond within 1 hour'}<br />
-                <span className="text-green font-bold">✓</span> {lang === 'ar' ? 'معلوماتك آمنة وسرية' : 'Your information is private'}
+              <p className="text-center text-xs text-gray-600 dark:text-gray-400 mt-3">
+                <span className="text-green font-bold">✓</span> {lang === 'ar' ? 'رد خلال ساعة' : 'Response within 1 hour'} &nbsp; | &nbsp;
+                <span className="text-green font-bold">✓</span> {lang === 'ar' ? 'خصوصية مضمونة' : 'Privacy guaranteed'}
               </p>
             </form>
           </div>

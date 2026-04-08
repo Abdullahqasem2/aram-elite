@@ -137,31 +137,31 @@ const Services: React.FC = () => {
   };
 
   return (
-    <section className="bg-bg px-6 py-16" id="services">
-      <div className="max-w-4xl mx-auto">
-        <div className="mb-10">
-          <span className="inline-block bg-primary text-white font-cond text-xs font-bold uppercase px-3.5 py-1 rounded mb-3">All Services · جميع الخدمات</span>
-          <h2 className="font-cond text-4xl md:text-5xl font-bold text-primary-dark mb-2">What Can We Do For You?</h2>
-          <p className="font-arabic text-lg font-bold text-text3">ماذا نستطيع أن نقدم لك؟</p>
-          <p className="text-text2 leading-relaxed max-w-2xl mt-3">Select a category below to see what we offer.</p>
+    <section className="bg-white dark:bg-gray-800 px-6 py-16 md:py-20" id="services">
+      <div className="max-w-5xl mx-auto">
+        <div className="mb-12 md:mb-14">
+          <span className="inline-block bg-primary dark:bg-blue-600 text-white font-cond text-xs font-bold uppercase px-5 py-2 rounded-full mb-5 tracking-wide">All Services</span>
+          <h2 className="font-cond text-4xl md:text-5xl font-bold text-primary-dark dark:text-white mb-3">What Can We Do For You?</h2>
+          <p className="font-arabic text-lg font-bold text-primary dark:text-blue-300">ماذا نستطيع أن نقدم لك؟</p>
+          <p className="text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl mt-4">Select a category below to see our complete service offerings</p>
         </div>
 
-        <div className="flex flex-wrap gap-2 mb-9">
+        <div className="flex flex-wrap gap-2 md:gap-3 mb-10 md:mb-12">
           {['contracting', 'maintenance', 'renovation', 'sports', 'lux'].map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-5 py-2.5 rounded-lg font-cond text-sm font-bold uppercase transition ${
+              className={`px-5 md:px-6 py-2.5 md:py-3 rounded-lg font-cond text-xs md:text-sm font-bold uppercase transition-all transform hover:scale-105 shadow-sm ${
                 activeTab === tab
-                  ? 'bg-primary text-white'
-                  : 'bg-gray-100 dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-200 hover:bg-primary hover:text-white'
+                  ? 'bg-primary dark:bg-blue-600 text-white shadow-lg'
+                  : 'bg-gray-100 dark:bg-gray-700 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white hover:border-primary'
               }`}
             >
-              {tab === 'contracting' && '🏗 General Contracting'}
+              {tab === 'contracting' && '🏗 Contracting'}
               {tab === 'maintenance' && '🔧 Maintenance'}
               {tab === 'renovation' && '🎨 Renovation'}
-              {tab === 'sports' && '🏟 Sports Facilities'}
-              {tab === 'lux' && '♛ Royal & Luxury'}
+              {tab === 'sports' && '🏟 Sports'}
+              {tab === 'lux' && '♛ Luxury'}
             </button>
           ))}
         </div>
