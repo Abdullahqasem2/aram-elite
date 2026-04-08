@@ -1,22 +1,34 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 const Stats: React.FC = () => {
-  const stats = [
-    { num: '10+', label: 'Years in Saudi Arabia', ar: 'سنوات في المملكة' },
-    { num: '5', label: 'Specialist Companies', ar: 'شركات متخصصة' },
-    { num: '500+', label: 'Projects Completed', ar: 'مشروع منجز' },
-    { num: '100%', label: 'Client Satisfaction', ar: 'رضا عملائنا' },
-  ];
+  const { lang } = useLanguage();
+
+  const stats = lang === 'ar'
+    ? [
+        { num: '40+', label: 'سنة خبرة جماعية', labelEn: 'Years Experience' },
+        { num: '500+', label: 'مشروع منجز', labelEn: 'Projects Delivered' },
+        { num: '30+', label: 'خدمة متخصصة', labelEn: 'Services Covered' },
+        { num: '5', label: 'أقسام متخصصة', labelEn: 'Specialist Divisions' },
+        { num: '24/7', label: 'خدمة طوارئ دائمة', labelEn: 'Emergency Support' },
+      ]
+    : [
+        { num: '40+', label: 'Years Experience', labelEn: 'سنة خبرة جماعية' },
+        { num: '500+', label: 'Projects Delivered', labelEn: 'مشروع منجز' },
+        { num: '30+', label: 'Services Covered', labelEn: 'خدمة متخصصة' },
+        { num: '5', label: 'Specialist Divisions', labelEn: 'أقسام متخصصة' },
+        { num: '24/7', label: 'Emergency Support', labelEn: 'خدمة طوارئ دائمة' },
+      ];
 
   return (
-    <section className="bg-gray-50 dark:bg-gray-800 px-6 py-16">
+    <section className="bg-primary-dark dark:bg-gray-900 px-6 py-16">
       <div className="max-w-5xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {stats.map((stat, i) => (
-            <div key={i} className="bg-gray-100 dark:bg-gray-700 rounded-xl p-8 text-center shadow-md hover:shadow-lg transition-shadow border border-gray-200 dark:border-gray-600">
-              <div className="font-cond text-5xl md:text-6xl font-bold text-primary dark:text-blue-400 mb-3">{stat.num}</div>
-              <div className="font-cond text-sm md:text-base font-bold text-gray-700 dark:text-gray-200 mb-1">{stat.label}</div>
-              <div className="font-arabic text-sm text-gray-500 dark:text-gray-400">{stat.ar}</div>
+            <div key={`stat-${i}`} className="text-center">
+              <div className="font-cond text-5xl md:text-6xl font-bold text-gold dark:text-yellow-400 mb-2">{stat.num}</div>
+              <div className="font-cond text-sm md:text-base font-bold text-white mb-1">{stat.label}</div>
+              <div className="font-arabic text-xs text-white text-opacity-60 dark:text-opacity-50">{stat.labelEn}</div>
             </div>
           ))}
         </div>

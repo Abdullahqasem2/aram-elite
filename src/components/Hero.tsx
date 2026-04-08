@@ -1,40 +1,100 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 const Hero: React.FC = () => {
+  const { lang } = useLanguage();
+
   return (
-    <section className="bg-gradient-to-br from-primary-dark to-primary dark:from-gray-800 dark:to-gray-900 px-6 py-20 text-center relative overflow-hidden">
-      <div className="max-w-3xl mx-auto relative z-10">
-        <span className="inline-block bg-gold dark:bg-yellow-500 text-black dark:text-gray-900 font-cond text-sm font-bold uppercase px-4 py-1.5 rounded mb-5 tracking-wider">
-          ⭐ Riyadh's #1 Contracting & Maintenance Group
-        </span>
-        <h1 className="font-cond text-5xl md:text-7xl font-bold text-white mb-2.5 leading-tight">
-          Build It. Fix It.<br/><span className="text-gold dark:text-yellow-400">Elevate It.</span>
-        </h1>
-        <p className="font-arabic text-2xl md:text-3xl font-bold text-white text-opacity-85 dark:text-opacity-90 mb-7">ابنِ. أصلح. ارتقِ بمشروعك مع أرام إيليت</p>
-        <p className="text-lg text-white text-opacity-90 dark:text-opacity-85 mb-3 leading-relaxed max-w-2xl mx-auto">
-          General contracting · Maintenance contracts · Renovation · Sports facilities · Royal mansions — all under one group, serving Riyadh and Saudi Arabia.
-        </p>
-        <p className="font-arabic text-lg text-white text-opacity-75 dark:text-opacity-70 mb-9 leading-relaxed max-w-2xl mx-auto">
-          مقاولات عامة · عقود صيانة · تجديد وترميم · منشآت رياضية · قصور ملكية — تحت مجموعة واحدة في الرياض والمملكة العربية السعودية.
-        </p>
-        <div className="flex flex-wrap gap-3.5 justify-center mb-10">
-          <a href="tel:+966XXXXXXXXX" className="bg-accent dark:bg-red-600 text-white px-9 py-4 rounded-lg font-cond text-lg font-bold uppercase hover:bg-red-700 dark:hover:bg-red-700 hover:shadow-xl transition-all flex items-center gap-2">
-            📞 Call Us Now · اتصل الآن
-          </a>
-          <a href="#services" className="bg-white bg-opacity-15 dark:bg-opacity-10 border-2 border-white border-opacity-50 dark:border-opacity-30 text-white px-8 py-3.5 rounded-lg font-cond text-lg font-bold uppercase hover:bg-opacity-25 dark:hover:bg-opacity-20 transition-all flex items-center gap-2">
-            See All Services · استعرض الخدمات
-          </a>
+    <section className="bg-linear-to-br from-primary-dark via-primary to-primary-dark dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 px-6 py-24 md:py-32 text-white relative overflow-hidden min-h-screen flex items-center">
+      <div className="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100\" height=\"100\"><rect fill=\"%23C49A2A\" width=\"1\" height=\"1\"/></svg>')]"></div>
+      <div className="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-3 gap-12 relative z-10">
+        {/* Left: Main Content */}
+        <div className="lg:col-span-2">
+          <div className="mb-8">
+            <span className="inline-flex items-center gap-2 bg-white bg-opacity-15 dark:bg-opacity-10 border border-white border-opacity-40 dark:border-opacity-20 text-gold px-4 py-2 rounded-full text-sm font-bold mb-6">
+              ⭐ {lang === 'ar' ? '40+ سنة خبرة جماعية · الرياض، المملكة العربية السعودية' : '40+ Years Collective Experience · Riyadh'}
+            </span>
+          </div>
+
+          <h1 className="font-cond text-5xl md:text-7xl font-bold leading-tight mb-6">
+            {lang === 'ar' ? (
+              <>مجموعة <span className="text-gold">أرام إيليت</span> — مقاولات وصيانة وتشطيب فاخر في الرياض</>
+            ) : (
+              <>Aram Elite Group — <span className="text-gold">Contracting, Maintenance & Luxury Fit-Out</span> in Riyadh</>
+            )}
+          </h1>
+
+          <p className="text-xl md:text-2xl text-white text-opacity-90 mb-6 leading-relaxed">
+            {lang === 'ar'
+              ? 'من بناء مشروعك التجاري الكبير إلى صيانة فيلتك — نغطي كل شيء. أكثر من 40 سنة خبرة جماعية في الرياض، مع تخصص في المشاريع السكنية والتجارية الراقية.'
+              : 'From building your next commercial project to maintaining your villa — we cover every trade. 40+ years of collective experience in Riyadh, specializing in high-end residential and commercial projects.'
+            }
+          </p>
+
+          <div className="flex flex-wrap gap-4 mb-10">
+            <a href="tel:+966500000000" className="bg-gold dark:bg-yellow-500 text-primary-dark dark:text-gray-900 px-9 py-4 rounded-lg font-cond text-lg font-bold uppercase hover:bg-yellow-400 dark:hover:bg-yellow-600 transition-colors flex items-center gap-2">
+              📞 {lang === 'ar' ? 'اتصل الآن' : 'Call Now'}
+            </a>
+            <a href="https://wa.me/966500000000" className="bg-green dark:bg-green-600 text-white px-9 py-4 rounded-lg font-cond text-lg font-bold uppercase hover:bg-green-700 dark:hover:bg-green-700 transition-colors flex items-center gap-2">
+              💬 {lang === 'ar' ? 'واتساب' : 'WhatsApp'}
+            </a>
+            <a href="#contact" className="bg-white bg-opacity-15 dark:bg-opacity-10 border-2 border-white text-white px-8 py-3.5 rounded-lg font-cond text-lg font-bold uppercase hover:bg-opacity-25 dark:hover:bg-opacity-20 transition-colors flex items-center gap-2">
+              📋 {lang === 'ar' ? 'اطلب عرض سعر' : 'Get a Quote'}
+            </a>
+          </div>
+
+          <div className="flex flex-wrap gap-4">
+            <span className="text-sm font-semibold text-gold flex items-center gap-2">✓ {lang === 'ar' ? '40+ سنة خبرة' : '40+ Years Experience'}</span>
+            <span className="text-sm font-semibold text-gold flex items-center gap-2">✓ {lang === 'ar' ? 'زيارة موقع مجانية' : 'Free Site Visit'}</span>
+            <span className="text-sm font-semibold text-gold flex items-center gap-2">✓ {lang === 'ar' ? 'استشارة مجانية' : 'Free Consultation'}</span>
+            <span className="text-sm font-semibold text-gold flex items-center gap-2">✓ {lang === 'ar' ? 'ملف أعمال عند الطلب' : 'Portfolio on Request'}</span>
+          </div>
         </div>
-        <div className="flex flex-wrap gap-6 justify-center">
-          <span className="bg-white bg-opacity-10 dark:bg-opacity-5 border border-white border-opacity-20 dark:border-opacity-10 text-white px-5 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
-            <span className="text-green-400">✓</span> Free On-Site Visit · زيارة مجانية
-          </span>
-          <span className="bg-white bg-opacity-10 dark:bg-opacity-5 border border-white border-opacity-20 dark:border-opacity-10 text-white px-5 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
-            <span className="text-green-400">✓</span> Free Call Consultation · استشارة هاتفية مجانية
-          </span>
-          <span className="bg-white bg-opacity-10 dark:bg-opacity-5 border border-white border-opacity-20 dark:border-opacity-10 text-white px-5 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
-            <span className="text-green-400">✓</span> Free Online Consult · استشارة عبر الإنترنت مجاناً
-          </span>
+
+        {/* Right: Consultation Card */}
+        <div className="lg:col-span-1">
+          <div className="bg-white dark:bg-gray-700 rounded-xl p-8 shadow-2xl">
+            <span className="inline-block bg-green dark:bg-green-700 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">
+              ✅ {lang === 'ar' ? 'مجاناً بالكامل' : '100% Free'}
+            </span>
+            <h3 className="font-cond text-2xl font-bold text-primary-dark dark:text-blue-400 mb-6">
+              {lang === 'ar' ? 'احصل على استشارتك المجانية الآن' : 'Get Your Free Consultation'}
+            </h3>
+
+            <div className="space-y-4 mb-6">
+              <div className="flex gap-4">
+                <span className="text-2xl">🏠</span>
+                <div>
+                  <p className="font-bold text-primary-dark dark:text-blue-300 text-sm">
+                    {lang === 'ar' ? 'زيارة موقع مجانية — نأتي إليك' : 'Free Site Visit — We come to you'}
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-2xl">📞</span>
+                <div>
+                  <p className="font-bold text-primary-dark dark:text-blue-300 text-sm">
+                    {lang === 'ar' ? 'استشارة هاتفية مجانية' : 'Free Phone Consultation'}
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-2xl">💬</span>
+                <div>
+                  <p className="font-bold text-primary-dark dark:text-blue-300 text-sm">
+                    {lang === 'ar' ? 'استشارة واتساب — أي وقت' : 'WhatsApp Consultation — Anytime'}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <a href="tel:+966500000000" className="w-full bg-primary-dark dark:bg-gray-800 text-white py-3 rounded-lg font-bold text-center hover:bg-primary-dark hover:bg-opacity-90 transition-colors block mb-3">
+              📞 {lang === 'ar' ? 'احجز استشارتك' : 'Book Consultation'}
+            </a>
+            <a href="https://wa.me/966500000000" className="w-full bg-green dark:bg-green-600 text-white py-3 rounded-lg font-bold text-center hover:bg-green-700 transition-colors block">
+              💬 {lang === 'ar' ? 'واتساب' : 'WhatsApp'}
+            </a>
+          </div>
         </div>
       </div>
     </section>
