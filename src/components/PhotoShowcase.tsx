@@ -2,7 +2,7 @@ import React from 'react';
 
 const PhotoShowcase: React.FC = () => {
   return (
-    <div className="grid grid-cols-3 md:grid-cols-5 gap-1 bg-gray-200 dark:bg-gray-800">
+    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-0.5 md:gap-1 bg-gray-200 dark:bg-gray-800">
       {/* Tall left column */}
       <div className="col-span-1 md:row-span-2">
         <div className="relative h-60 md:h-full overflow-hidden bg-gradient-to-br from-primary-dark to-primary dark:from-gray-700 dark:to-gray-800">

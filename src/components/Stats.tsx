@@ -21,13 +21,21 @@ const Stats: React.FC = () => {
       ];
 
   return (
-    <section className="bg-primary-dark dark:bg-gray-900 px-6 py-16">
-      <div className="max-w-5xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+    <section className="bg-primary-dark dark:bg-gray-900 px-6 py-12 md:py-20">
+      <div className="max-w-6xl mx-auto">
+        <div className="mb-10 md:mb-16">
+          <h2 className="font-cond text-3xl md:text-5xl font-bold text-white mb-3">
+            {lang === 'ar' ? 'أرقام تتحدث عن نجاحنا' : 'Our Track Record'}
+          </h2>
+          <p className="text-white text-opacity-70 text-base md:text-lg">
+            {lang === 'ar' ? 'أكثر من 40 سنة من الريادة والتميز في الرياض' : '40+ years of excellence and leadership in Riyadh'}
+          </p>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-8">
           {stats.map((stat, i) => (
             <div key={`stat-${i}`} className="text-center">
-              <div className="font-cond text-5xl md:text-6xl font-bold text-gold dark:text-yellow-400 mb-2">{stat.num}</div>
-              <div className="font-cond text-sm md:text-base font-bold text-white mb-1">{stat.label}</div>
+              <div className="font-cond text-4xl md:text-5xl lg:text-6xl font-bold text-gold dark:text-yellow-400 mb-2">{stat.num}</div>
+              <div className="font-cond text-xs md:text-sm lg:text-base font-bold text-white mb-1">{stat.label}</div>
               <div className="font-arabic text-xs text-white text-opacity-60 dark:text-opacity-50">{stat.labelEn}</div>
             </div>
           ))}
