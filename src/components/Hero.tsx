@@ -5,8 +5,7 @@ const Hero: React.FC = () => {
   const { lang } = useLanguage();
 
   return (
-    <section className="bg-linear-to-br from-primary-dark via-primary to-primary-dark dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 px-6 py-24 md:py-32 text-white relative overflow-hidden min-h-screen flex items-center">
-      <div className="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100\" height=\"100\"><rect fill=\"%23C49A2A\" width=\"1\" height=\"1\"/></svg>')]"></div>
+    <section className="bg-linear-to-br from-primary-dark via-primary to-primary-dark dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 px-6 py-24 md:py-32 text-white relative overflow-hidden min-h-screen flex items-center" style={{ backgroundImage: 'repeating-linear-gradient(0deg, rgba(196, 154, 42, 0.05) 0px, rgba(196, 154, 42, 0.05) 1px, transparent 1px, transparent 100px)' }}>
       <div className="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-3 gap-12 relative z-10">
         {/* Left: Main Content */}
         <div className="lg:col-span-2">
