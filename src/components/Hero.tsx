@@ -15,20 +15,43 @@ const Hero: React.FC = () => {
             </span>
           </div>
 
-          <h1 className="font-cond text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-            {lang === 'ar' ? (
-              <>مجموعة <span className="text-gold">أرام إيليت</span> — مقاولات وصيانة وتشطيب فاخر</>
-            ) : (
-              <>Aram Elite Group — <span className="text-gold">Contracting, Maintenance & Luxury Fit-Out</span></>
-            )}
+          <h1 className="font-cond text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-2 tracking-tight">
+            Aram Elite Group — <span className="bg-linear-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent">Contracting, Design & Decor Specialists</span>
           </h1>
+          <h2 className="font-arabic text-2xl md:text-4xl lg:text-5xl font-bold text-gold mb-6" dir="rtl">
+            مجموعة أرام إيليت — خبراء المقاولات والتصميم والديكور
+          </h2>
 
-          <p className="text-lg md:text-xl lg:text-2xl text-white text-opacity-90 mb-6 leading-relaxed">
+          <p className="text-lg md:text-xl lg:text-2xl text-white text-opacity-90 mb-4 leading-relaxed">
             {lang === 'ar'
               ? 'من بناء مشروعك التجاري الكبير إلى صيانة فيلتك — نغطي كل شيء. أكثر من 40 سنة خبرة جماعية في الرياض، مع تخصص في المشاريع السكنية والتجارية الراقية.'
               : 'From building your next commercial project to maintaining your villa — we cover every trade. 40+ years of collective experience in Riyadh, specializing in high-end residential and commercial projects.'
             }
           </p>
+
+          <h3 className="font-cond text-lg md:text-xl font-bold text-gold mb-2 tracking-wide uppercase">
+            {lang === 'ar' ? 'خدمات التصميم والديكور الاحترافية' : 'Professional Design & Decor Services'}
+          </h3>
+          <p className="text-base md:text-lg text-white text-opacity-85 mb-5 leading-relaxed">
+            {lang === 'ar'
+              ? 'يقدّم فريقنا أعمال تشطيب وديكور راقية بأعلى معايير الحرفية — أعمال تكسية الخشب، تصميم وتنفيذ واجهات الفلل والمباني، أعمال الرخام المتخصصة داخلياً وخارجياً، وتصاميم الجبس للقصور والمنازل الفاخرة إضافة إلى أعمال الجبس بشكل عام. كما نقدّم تصميماً وتنفيذاً خاصاً لمفاهيم المطاعم والمقاهي والمنشآت التجارية الراقية.'
+              : 'Our team delivers premium finishing and decor work to the highest craftsmanship standards — wood cladding, villa and building façade design & implementation, specialized indoor and outdoor marble work, and gypsum designs for high-end mansions plus general gypsum work. We also create bespoke concept design and construction for high-end restaurants, cafés, and businesses.'
+            }
+          </p>
+
+          <div className="flex flex-wrap gap-2 mb-8">
+            {[
+              { en: 'Wood Cladding', ar: 'تكسية خشبية' },
+              { en: 'Facade Design & Implementation', ar: 'تصميم وتنفيذ واجهات' },
+              { en: 'Marble Works — Indoor & Outdoor', ar: 'أعمال رخام داخلي وخارجي' },
+              { en: 'Gypsum Design', ar: 'تصاميم جبس' },
+              { en: 'Restaurant & Café Concepts', ar: 'تصاميم مطاعم ومقاهي' },
+            ].map((chip, i) => (
+              <span key={`chip-${i}`} className="bg-gold bg-opacity-15 border border-gold border-opacity-40 text-gold text-xs md:text-sm font-bold px-3 py-1.5 rounded-full">
+                {lang === 'ar' ? chip.ar : chip.en}
+              </span>
+            ))}
+          </div>
 
           <div className="flex flex-wrap gap-3 md:gap-4 mb-8">
             <a href="tel:+966502080228" className="bg-gold dark:bg-yellow-500 text-primary-dark dark:text-gray-900 px-7 md:px-10 py-3.5 md:py-4 rounded-lg font-cond text-sm md:text-base font-bold uppercase hover:bg-yellow-300 dark:hover:bg-yellow-600 transition-all transform hover:scale-105 shadow-lg flex items-center gap-2 whitespace-nowrap">
