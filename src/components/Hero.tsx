@@ -31,10 +31,10 @@ const Hero: React.FC = () => {
           </p>
 
           <div className="flex flex-wrap gap-3 md:gap-4 mb-8">
-            <a href="tel:+966500000000" className="bg-gold dark:bg-yellow-500 text-primary-dark dark:text-gray-900 px-7 md:px-10 py-3.5 md:py-4 rounded-lg font-cond text-sm md:text-base font-bold uppercase hover:bg-yellow-300 dark:hover:bg-yellow-600 transition-all transform hover:scale-105 shadow-lg flex items-center gap-2 whitespace-nowrap">
+            <a href="tel:+966502080228" className="bg-gold dark:bg-yellow-500 text-primary-dark dark:text-gray-900 px-7 md:px-10 py-3.5 md:py-4 rounded-lg font-cond text-sm md:text-base font-bold uppercase hover:bg-yellow-300 dark:hover:bg-yellow-600 transition-all transform hover:scale-105 shadow-lg flex items-center gap-2 whitespace-nowrap">
               📞 {lang === 'ar' ? 'اتصل الآن' : 'Call Now'}
             </a>
-            <a href="https://wa.me/966500000000" className="bg-green dark:bg-green-600 text-white px-7 md:px-10 py-3.5 md:py-4 rounded-lg font-cond text-sm md:text-base font-bold uppercase hover:bg-green-600 dark:hover:bg-green-700 transition-all transform hover:scale-105 shadow-lg flex items-center gap-2 whitespace-nowrap">
+            <a href="https://wa.me/966502080228" className="bg-green dark:bg-green-600 text-white px-7 md:px-10 py-3.5 md:py-4 rounded-lg font-cond text-sm md:text-base font-bold uppercase hover:bg-green-600 dark:hover:bg-green-700 transition-all transform hover:scale-105 shadow-lg flex items-center gap-2 whitespace-nowrap">
               💬 {lang === 'ar' ? 'واتساب' : 'WhatsApp'}
             </a>
             <a href="#contact" className="bg-white bg-opacity-20 dark:bg-opacity-15 border-2 border-white text-white px-6 md:px-9 py-3 md:py-3.5 rounded-lg font-cond text-sm md:text-base font-bold uppercase hover:bg-opacity-30 dark:hover:bg-opacity-25 transition-all transform hover:scale-105 flex items-center gap-2 whitespace-nowrap">
@@ -90,10 +90,10 @@ const Hero: React.FC = () => {
               </div>
             </div>
 
-            <a href="tel:+966500000000" className="w-full bg-primary-dark dark:bg-blue-700 text-white py-3.5 rounded-lg font-bold text-center hover:bg-primary-dark hover:bg-opacity-90 transition-all transform hover:shadow-lg block mb-3">
+            <a href="tel:+966502080228" className="w-full bg-primary-dark dark:bg-blue-700 text-white py-3.5 rounded-lg font-bold text-center hover:bg-primary-dark hover:bg-opacity-90 transition-all transform hover:shadow-lg block mb-3">
               📞 {lang === 'ar' ? 'احجز الآن' : 'Book Now'}
             </a>
-            <a href="https://wa.me/966500000000" className="w-full bg-green dark:bg-green-600 text-white py-3.5 rounded-lg font-bold text-center hover:bg-green-700 dark:hover:bg-green-700 transition-all transform hover:shadow-lg block">
+            <a href="https://wa.me/966502080228" className="w-full bg-green dark:bg-green-600 text-white py-3.5 rounded-lg font-bold text-center hover:bg-green-700 dark:hover:bg-green-700 transition-all transform hover:shadow-lg block">
               💬 {lang === 'ar' ? 'واتساب' : 'WhatsApp'}
             </a>
           </div>

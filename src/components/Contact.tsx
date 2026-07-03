@@ -67,16 +67,16 @@ const Contact: React.FC = () => {
           {/* Left: Contact Methods */}
           <div>
             <div className="space-y-4">
-              <a href="tel:+966500000000" className="flex items-center gap-4 bg-white bg-opacity-10 dark:bg-opacity-5 border border-white border-opacity-20 dark:border-opacity-10 rounded-lg p-5 hover:bg-opacity-15 dark:hover:bg-opacity-10 transition">
+              <a href="tel:+966502080228" className="flex items-center gap-4 bg-white bg-opacity-10 dark:bg-opacity-5 border border-white border-opacity-20 dark:border-opacity-10 rounded-lg p-5 hover:bg-opacity-15 dark:hover:bg-opacity-10 transition">
                 <span className="text-3xl">📞</span>
                 <div>
                   <p className="font-bold text-gold mb-1">{lang === 'ar' ? 'اتصل مباشرة' : 'Call Us Directly'} <span className="bg-green dark:bg-green-600 text-white text-xs font-bold px-2 py-0.5 rounded ml-2">{lang === 'ar' ? 'مجاناً' : 'FREE'}</span></p>
-                  <p className="font-arabic text-sm text-white text-opacity-70">{lang === 'ar' ? 'اتصل بنا مباشرة — مجاناً' : '+966 50 000 0000'}</p>
-                  <p className="text-lg font-bold text-gold mt-1">+966 50 000 0000</p>
+                  <p className="font-arabic text-sm text-white text-opacity-70">{lang === 'ar' ? 'اتصل بنا مباشرة — مجاناً' : '+966 50 208 0228'}</p>
+                  <p className="text-lg font-bold text-gold mt-1">+966 50 208 0228</p>
                 </div>
               </a>
 
-              <a href="https://wa.me/966500000000" className="flex items-center gap-4 bg-white bg-opacity-10 dark:bg-opacity-5 border border-white border-opacity-20 dark:border-opacity-10 rounded-lg p-5 hover:bg-opacity-15 dark:hover:bg-opacity-10 transition">
+              <a href="https://wa.me/966502080228" className="flex items-center gap-4 bg-white bg-opacity-10 dark:bg-opacity-5 border border-white border-opacity-20 dark:border-opacity-10 rounded-lg p-5 hover:bg-opacity-15 dark:hover:bg-opacity-10 transition">
                 <span className="text-3xl">💬</span>
                 <div>
                   <p className="font-bold text-green mb-1">{lang === 'ar' ? 'واتساب' : 'WhatsApp Us'} <span className="bg-green dark:bg-green-600 text-white text-xs font-bold px-2 py-0.5 rounded ml-2">{lang === 'ar' ? 'الأسرع' : 'FASTEST'}</span></p>

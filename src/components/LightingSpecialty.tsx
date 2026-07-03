@@ -42,10 +42,10 @@ const LightingSpecialty: React.FC = () => {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <a href="https://wa.me/966500000000" className="bg-green dark:bg-green-600 hover:bg-green-700 dark:hover:bg-green-700 text-white px-8 py-4 rounded-lg font-cond font-bold uppercase transition">
+              <a href="https://wa.me/966502080228" className="bg-green dark:bg-green-600 hover:bg-green-700 dark:hover:bg-green-700 text-white px-8 py-4 rounded-lg font-cond font-bold uppercase transition">
                 💬 {lang === 'ar' ? 'استفسر على واتساب' : 'WhatsApp Enquiry'}
               </a>
-              <a href="tel:+966500000000" className="bg-white bg-opacity-10 hover:bg-opacity-20 border-2 border-white text-white px-8 py-3.5 rounded-lg font-cond font-bold uppercase transition">
+              <a href="tel:+966502080228" className="bg-white bg-opacity-10 hover:bg-opacity-20 border-2 border-white text-white px-8 py-3.5 rounded-lg font-cond font-bold uppercase transition">
                 📞 {lang === 'ar' ? 'اتصل بنا' : 'Call Us'}
               </a>
             </div>

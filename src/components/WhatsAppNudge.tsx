@@ -29,7 +29,7 @@ const WhatsAppNudge: React.FC<WhatsAppNudgeProps> = ({ variant = 'primary' }) =>
       <div className="max-w-5xl mx-auto flex items-center justify-between flex-wrap gap-4">
         <p className="text-base font-semibold text-opacity-95">{message}</p>
         <a
-          href={`https://wa.me/966500000000${lang === 'ar' ? '?text=أهلاً' : ''}`}
+          href={`https://wa.me/966502080228${lang === 'ar' ? '?text=أهلاً' : ''}`}
           className="bg-white text-green-700 dark:text-green-800 px-8 py-3 rounded-lg font-cond font-bold uppercase hover:bg-gray-100 transition-colors whitespace-nowrap"
         >
           {buttonText}

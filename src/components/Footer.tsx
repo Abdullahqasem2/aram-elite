@@ -64,12 +64,12 @@ const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2">
               <li>
-                <a href="tel:+966500000000" className="text-sm text-gray-300 dark:text-gray-400 hover:text-white dark:hover:text-yellow-400 transition">
-                  📞 +966 50 000 0000
+                <a href="tel:+966502080228" className="text-sm text-gray-300 dark:text-gray-400 hover:text-white dark:hover:text-yellow-400 transition">
+                  📞 +966 50 208 0228
                 </a>
               </li>
               <li>
-                <a href="https://wa.me/966500000000" className="text-sm text-gray-300 dark:text-gray-400 hover:text-white dark:hover:text-yellow-400 transition">
+                <a href="https://wa.me/966502080228" className="text-sm text-gray-300 dark:text-gray-400 hover:text-white dark:hover:text-yellow-400 transition">
                   💬 {lang === 'ar' ? 'واتساب' : 'WhatsApp'}
                 </a>
               </li>

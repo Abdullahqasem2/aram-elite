@@ -16,10 +16,10 @@ const TopBar: React.FC = () => {
         </span>
       </div>
       <div className="flex gap-2 md:gap-4 items-center flex-wrap justify-end">
-        <a href="tel:+966500000000" className="text-gold dark:text-yellow-400 text-xs md:text-sm hover:text-yellow-300 transition-colors flex items-center gap-1 font-semibold whitespace-nowrap">
-          📞 <span className="hidden md:inline">+966 50 000</span>
+        <a href="tel:+966502080228" className="text-gold dark:text-yellow-400 text-xs md:text-sm hover:text-yellow-300 transition-colors flex items-center gap-1 font-semibold whitespace-nowrap">
+          📞 <span className="hidden md:inline">+966 50 208 0228</span>
         </a>
-        <a href="https://wa.me/966500000000" className="text-green dark:text-green-400 text-xs md:text-sm hover:text-green-300 transition-colors flex items-center gap-1 font-semibold whitespace-nowrap">
+        <a href="https://wa.me/966502080228" className="text-green dark:text-green-400 text-xs md:text-sm hover:text-green-300 transition-colors flex items-center gap-1 font-semibold whitespace-nowrap">
           💬 <span className="hidden md:inline">WhatsApp</span>
         </a>
         <div className="flex gap-1 bg-white bg-opacity-10 dark:bg-opacity-10 border border-white border-opacity-20 rounded-full p-1">
