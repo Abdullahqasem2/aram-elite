@@ -5,17 +5,17 @@ const TopBar: React.FC = () => {
   const { lang, setLang } = useLanguage();
 
   return (
-    <div className="sticky top-0 z-50 bg-primary-dark/55 backdrop-blur-md px-6 py-3 flex items-center justify-between flex-wrap gap-2.5 shadow-lg border-b border-white/10 transition-colors">
-      <div className="flex items-center gap-5 flex-wrap">
-        <span className="text-gold font-cond text-xl font-bold tracking-widest">ARAM ELITE</span>
-        <span className="bg-green dark:bg-green-700 text-white text-xs font-bold px-2.5 py-0.5 rounded font-cond tracking-wide">
+    <div className="bg-primary-dark/55 backdrop-blur-md px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between gap-2 shadow-lg border-b border-white/10 transition-colors">
+      <div className="flex items-center gap-2 sm:gap-5 min-w-0">
+        <span className="text-gold font-cond text-base sm:text-xl font-bold tracking-widest shrink-0">ARAM ELITE</span>
+        <span className="hidden sm:inline bg-green dark:bg-green-700 text-white text-xs font-bold px-2.5 py-0.5 rounded font-cond tracking-wide shrink-0">
           {lang === 'ar' ? '✅ استشارة مجانية' : 'FREE CONSULTATION'}
         </span>
-        <span className="text-gray-300 dark:text-gray-400 text-xs font-semibold">
+        <span className="hidden md:inline text-gray-300 dark:text-gray-400 text-xs font-semibold">
           {lang === 'ar' ? '40+ سنة خبرة · الرياض' : '40+ Years Experience · Riyadh'}
         </span>
       </div>
-      <div className="flex gap-2 md:gap-4 items-center flex-wrap justify-end">
+      <div className="flex gap-1.5 sm:gap-4 items-center shrink-0">
         <a href="tel:+966502080228" className="text-gold dark:text-yellow-400 text-xs md:text-sm hover:text-yellow-300 transition-colors flex items-center gap-1 font-semibold whitespace-nowrap">
           📞 <span className="hidden md:inline">+966 50 208 0228</span>
         </a>
@@ -44,7 +44,7 @@ const TopBar: React.FC = () => {
             EN
           </button>
         </div>
-        <a href="#contact" className="bg-accent dark:bg-red-600 text-white px-4 py-2 text-xs md:text-sm font-bold rounded hover:bg-red-700 dark:hover:bg-red-700 transition font-cond tracking-wide uppercase whitespace-nowrap">
+        <a href="#contact" className="hidden sm:inline-flex bg-accent dark:bg-red-600 text-white px-3 sm:px-4 py-2 text-xs md:text-sm font-bold rounded hover:bg-red-700 dark:hover:bg-red-700 transition font-cond tracking-wide uppercase whitespace-nowrap">
           {lang === 'ar' ? 'اطلب' : 'Order'}
         </a>
       </div>

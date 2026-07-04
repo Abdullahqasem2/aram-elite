@@ -29,8 +29,10 @@ function App() {
       <ThemeProvider>
         <div className="relative min-h-screen overflow-x-hidden text-gray-900 dark:text-gray-100 transition-colors">
           <div className="min-h-screen flex flex-col">
+          <header className="sticky top-0 z-50">
             <TopBar />
             <Nav overHero />
+          </header>
             <Hero />
           </div>
 
