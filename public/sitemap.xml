@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.aram-elite.sa/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&amp;fit=crop&amp;w=1400&amp;q=75</image:loc>
+      <image:title>General Contracting Riyadh — مقاولات عامة الرياض</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&amp;fit=crop&amp;w=1400&amp;q=75</image:loc>
+      <image:title>Interior Design Riyadh — تصميم داخلي الرياض</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&amp;fit=crop&amp;w=1400&amp;q=75</image:loc>
+      <image:title>Renovation Riyadh — ترميم وتجديد الرياض</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&amp;fit=crop&amp;w=1400&amp;q=75</image:loc>
+      <image:title>Maintenance Contracts Riyadh — عقود صيانة الرياض</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&amp;fit=crop&amp;w=1400&amp;q=75</image:loc>
+      <image:title>Luxury Mansion Construction Riyadh — بناء قصور فاخرة الرياض</image:title>
+    </image:image>
+  </url>
+</urlset>

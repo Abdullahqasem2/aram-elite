@@ -137,13 +137,22 @@ const Services: React.FC = () => {
   };
 
   return (
-    <section className="bg-white dark:bg-gray-800 px-6 py-16 md:py-20" id="services">
+    <section className="bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-6 py-16 md:py-20" id="services">
       <div className="max-w-5xl mx-auto">
-        <div className="mb-12 md:mb-14">
-          <span className="inline-block bg-primary dark:bg-blue-600 text-white font-cond text-xs font-bold uppercase px-5 py-2 rounded-full mb-5 tracking-wide">All Services</span>
-          <h2 className="font-cond text-4xl md:text-5xl font-bold text-primary-dark dark:text-white mb-3">What Can We Do For You?</h2>
-          <p className="font-arabic text-lg font-bold text-primary dark:text-blue-300">ماذا نستطيع أن نقدم لك؟</p>
-          <p className="text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl mt-4">Select a category below to see our complete service offerings</p>
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 md:mb-14">
+          <div>
+            <span className="inline-block bg-primary dark:bg-blue-600 text-white font-cond text-xs font-bold uppercase px-5 py-2 rounded-full mb-5 tracking-wide">All Services</span>
+            <h2 className="font-cond text-4xl md:text-5xl lg:text-6xl font-bold text-primary-dark dark:text-white mb-2">What Can We Do For You?</h2>
+            <div className="w-20 h-1 bg-gold rounded-full mb-3"></div>
+            <p className="font-arabic text-lg font-bold text-primary-dark dark:text-blue-300">ماذا نستطيع أن نقدم لك؟</p>
+            <p className="text-gray-700 dark:text-gray-400 leading-relaxed max-w-2xl mt-4">Select a category below to see our complete service offerings</p>
+          </div>
+          <a
+            href="#contact"
+            className="shrink-0 bg-accent text-white px-8 py-3.5 rounded-lg font-cond text-sm md:text-base font-bold uppercase hover:bg-red-700 transition-all transform hover:scale-105 shadow-lg text-center whitespace-nowrap"
+          >
+            📋 Get a Free Quote · اطلب عرض سعر
+          </a>
         </div>
 
         <div className="flex flex-wrap gap-2 md:gap-3 mb-10 md:mb-12">
@@ -157,11 +166,11 @@ const Services: React.FC = () => {
                   : 'bg-gray-100 dark:bg-gray-700 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white hover:border-primary'
               }`}
             >
-              {tab === 'contracting' && '🏗 Contracting'}
-              {tab === 'maintenance' && '🔧 Maintenance'}
-              {tab === 'renovation' && '🎨 Renovation'}
-              {tab === 'sports' && '🏟 Sports'}
-              {tab === 'lux' && '♛ Luxury'}
+              {tab === 'contracting' && '🏗 Contracting · مقاولات'}
+              {tab === 'maintenance' && '🔧 Maintenance · صيانة'}
+              {tab === 'renovation' && '🎨 Renovation · تشطيب'}
+              {tab === 'sports' && '🏟 Sports · رياضة'}
+              {tab === 'lux' && '♛ Luxury · فاخر'}
             </button>
           ))}
         </div>
@@ -170,17 +179,17 @@ const Services: React.FC = () => {
           {servicesByCategory[activeTab]?.map((service, i) => (
             <div
               key={i}
-              className={`bg-gray-50 dark:bg-gray-700 border rounded-lg p-6 ${
+              className={`bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-gray-100 border rounded-lg p-6 ${
                 service.isGold ? 'border-t-4 border-t-gold' : 'border-t-4 border-t-primary'
               }`}
             >
               <span className="text-4xl block mb-3">{service.icon}</span>
-              <h3 className="font-cond text-xl font-bold text-primary dark:text-blue-300">{service.name}</h3>
-              <p className="font-arabic text-sm text-gold dark:text-yellow-400 font-semibold mb-3">{service.nameAr}</p>
+              <h3 className="font-cond text-xl font-bold text-primary-dark dark:text-blue-300">{service.name}</h3>
+              <p className="font-arabic text-sm text-primary-dark dark:text-yellow-400 font-semibold mb-3">{service.nameAr}</p>
               <p className="text-sm text-gray-700 dark:text-gray-200 mb-3">{service.desc}</p>
               <p className="font-arabic text-xs text-gray-600 dark:text-gray-400 mb-4">{service.descAr}</p>
               <div className="mb-4">
-                <p className="text-xs font-bold uppercase text-gray-600 dark:text-gray-400 mb-2">Includes:</p>
+                <p className="text-xs font-bold uppercase text-gray-700 dark:text-gray-400 mb-2">Includes:</p>
                 <ul className="space-y-1">
                   {service.includes.map((item, j) => (
                     <li key={j} className="text-xs text-gray-700 dark:text-gray-300 flex gap-1.5">

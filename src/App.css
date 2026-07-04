@@ -40,11 +40,6 @@ section {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Dark mode section backgrounds */
-.dark section {
-  background-color: #1f2937;
-}
-
 /* Typography improvements */
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
@@ -72,16 +67,9 @@ img {
 
 /* Link styling */
 a {
-  color: inherit;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: none;
-}
-
-/* Override bg-white to dark background */
-.bg-white {
-  background-color: #162030 !important;
-  color: #ffffff;
 }

@@ -5,7 +5,7 @@ const Hero: React.FC = () => {
   const { lang } = useLanguage();
 
   return (
-    <section className="bg-linear-to-br from-primary-dark via-primary to-primary-dark dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 px-6 py-16 md:py-24 lg:py-32 text-white relative overflow-hidden min-h-screen flex items-center" style={{ backgroundImage: 'repeating-linear-gradient(0deg, rgba(196, 154, 42, 0.05) 0px, rgba(196, 154, 42, 0.05) 1px, transparent 1px, transparent 100px)' }}>
+    <section className="relative flex-1 flex items-center overflow-hidden text-white px-6 py-10 md:py-16 lg:py-20">
       <div className="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 relative z-10">
         {/* Left: Main Content */}
         <div className="lg:col-span-2">
@@ -15,10 +15,10 @@ const Hero: React.FC = () => {
             </span>
           </div>
 
-          <h1 className="font-cond text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-2 tracking-tight">
+          <h1 className="font-cond text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-2 tracking-tight drop-shadow-lg">
             Aram Elite Group — <span className="bg-linear-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent">Contracting, Design & Decor Specialists</span>
           </h1>
-          <h2 className="font-arabic text-2xl md:text-4xl lg:text-5xl font-bold text-gold mb-6" dir="rtl">
+          <h2 className="font-arabic text-2xl md:text-4xl lg:text-5xl font-bold text-gold mb-6 drop-shadow-md" dir="rtl">
             مجموعة أرام إيليت — خبراء المقاولات والتصميم والديكور
           </h2>
 
@@ -29,30 +29,6 @@ const Hero: React.FC = () => {
             }
           </p>
 
-          <h3 className="font-cond text-lg md:text-xl font-bold text-gold mb-2 tracking-wide uppercase">
-            {lang === 'ar' ? 'خدمات التصميم والديكور الاحترافية' : 'Professional Design & Decor Services'}
-          </h3>
-          <p className="text-base md:text-lg text-white text-opacity-85 mb-5 leading-relaxed">
-            {lang === 'ar'
-              ? 'يقدّم فريقنا أعمال تشطيب وديكور راقية بأعلى معايير الحرفية — أعمال تكسية الخشب، تصميم وتنفيذ واجهات الفلل والمباني، أعمال الرخام المتخصصة داخلياً وخارجياً، وتصاميم الجبس للقصور والمنازل الفاخرة إضافة إلى أعمال الجبس بشكل عام. كما نقدّم تصميماً وتنفيذاً خاصاً لمفاهيم المطاعم والمقاهي والمنشآت التجارية الراقية.'
-              : 'Our team delivers premium finishing and decor work to the highest craftsmanship standards — wood cladding, villa and building façade design & implementation, specialized indoor and outdoor marble work, and gypsum designs for high-end mansions plus general gypsum work. We also create bespoke concept design and construction for high-end restaurants, cafés, and businesses.'
-            }
-          </p>
-
-          <div className="flex flex-wrap gap-2 mb-8">
-            {[
-              { en: 'Wood Cladding', ar: 'تكسية خشبية' },
-              { en: 'Facade Design & Implementation', ar: 'تصميم وتنفيذ واجهات' },
-              { en: 'Marble Works — Indoor & Outdoor', ar: 'أعمال رخام داخلي وخارجي' },
-              { en: 'Gypsum Design', ar: 'تصاميم جبس' },
-              { en: 'Restaurant & Café Concepts', ar: 'تصاميم مطاعم ومقاهي' },
-            ].map((chip, i) => (
-              <span key={`chip-${i}`} className="bg-gold bg-opacity-15 border border-gold border-opacity-40 text-gold text-xs md:text-sm font-bold px-3 py-1.5 rounded-full">
-                {lang === 'ar' ? chip.ar : chip.en}
-              </span>
-            ))}
-          </div>
-
           <div className="flex flex-wrap gap-3 md:gap-4 mb-8">
             <a href="tel:+966502080228" className="bg-gold dark:bg-yellow-500 text-primary-dark dark:text-gray-900 px-7 md:px-10 py-3.5 md:py-4 rounded-lg font-cond text-sm md:text-base font-bold uppercase hover:bg-yellow-300 dark:hover:bg-yellow-600 transition-all transform hover:scale-105 shadow-lg flex items-center gap-2 whitespace-nowrap">
               📞 {lang === 'ar' ? 'اتصل الآن' : 'Call Now'}
@@ -60,7 +36,7 @@ const Hero: React.FC = () => {
             <a href="https://wa.me/966502080228" className="bg-green dark:bg-green-600 text-white px-7 md:px-10 py-3.5 md:py-4 rounded-lg font-cond text-sm md:text-base font-bold uppercase hover:bg-green-600 dark:hover:bg-green-700 transition-all transform hover:scale-105 shadow-lg flex items-center gap-2 whitespace-nowrap">
               💬 {lang === 'ar' ? 'واتساب' : 'WhatsApp'}
             </a>
-            <a href="#contact" className="bg-white bg-opacity-20 dark:bg-opacity-15 border-2 border-white text-white px-6 md:px-9 py-3 md:py-3.5 rounded-lg font-cond text-sm md:text-base font-bold uppercase hover:bg-opacity-30 dark:hover:bg-opacity-25 transition-all transform hover:scale-105 flex items-center gap-2 whitespace-nowrap">
+            <a href="#contact" className="bg-white !text-black border-2 border-white px-6 md:px-9 py-3 md:py-3.5 rounded-lg font-cond text-sm md:text-base font-bold uppercase hover:bg-gray-100 transition-all transform hover:scale-105 flex items-center gap-2 whitespace-nowrap">
               📋 {lang === 'ar' ? 'عرض سعر' : 'Get Quote'}
             </a>
           </div>
@@ -75,11 +51,11 @@ const Hero: React.FC = () => {
 
         {/* Right: Consultation Card */}
         <div className="lg:col-span-1">
-          <div className="bg-white dark:bg-gray-750 rounded-2xl p-8 shadow-2xl border border-gray-100 dark:border-gray-600">
-            <span className="inline-block bg-green dark:bg-green-600 text-white text-xs font-bold px-4 py-1.5 rounded-full mb-5 tracking-wide">
+          <div className="glass-card-solid rounded-2xl p-8 shadow-2xl text-gray-900">
+            <span className="inline-block bg-green text-white text-xs font-bold px-4 py-1.5 rounded-full mb-5 tracking-wide">
               ✅ {lang === 'ar' ? 'مجاناً 100%' : '100% FREE'}
             </span>
-            <h3 className="font-cond text-2xl font-bold text-primary-dark dark:text-white mb-6">
+            <h3 className="font-cond text-2xl font-bold text-primary-dark mb-6">
               {lang === 'ar' ? 'احصل على استشارتك الآن' : 'Free Consultation'}
             </h3>
 
@@ -87,28 +63,28 @@ const Hero: React.FC = () => {
               <div className="flex gap-3 items-start">
                 <span className="text-2xl shrink-0">🏠</span>
                 <div>
-                  <p className="font-semibold text-primary-dark dark:text-white text-sm">
+                  <p className="font-semibold text-primary-dark text-sm">
                     {lang === 'ar' ? 'زيارة موقع مجانية' : 'Free Site Visit'}
                   </p>
-                  <p className="text-xs text-gray-600 dark:text-gray-400 mt-0.5">{lang === 'ar' ? 'نأتي إليك' : 'We come to you'}</p>
+                  <p className="text-xs text-gray-600 mt-0.5">{lang === 'ar' ? 'نأتي إليك' : 'We come to you'}</p>
                 </div>
               </div>
               <div className="flex gap-3 items-start">
                 <span className="text-2xl shrink-0">📞</span>
                 <div>
-                  <p className="font-semibold text-primary-dark dark:text-white text-sm">
+                  <p className="font-semibold text-primary-dark text-sm">
                     {lang === 'ar' ? 'استشارة هاتفية' : 'Phone Consultation'}
                   </p>
-                  <p className="text-xs text-gray-600 dark:text-gray-400 mt-0.5">{lang === 'ar' ? 'مجانية' : 'Complimentary'}</p>
+                  <p className="text-xs text-gray-600 mt-0.5">{lang === 'ar' ? 'مجانية' : 'Complimentary'}</p>
                 </div>
               </div>
               <div className="flex gap-3 items-start">
                 <span className="text-2xl shrink-0">💬</span>
                 <div>
-                  <p className="font-semibold text-primary-dark dark:text-white text-sm">
+                  <p className="font-semibold text-primary-dark text-sm">
                     {lang === 'ar' ? 'واتساب' : 'WhatsApp'}
                   </p>
-                  <p className="text-xs text-gray-600 dark:text-gray-400 mt-0.5">{lang === 'ar' ? 'متاح أي وقت' : '24/7 Available'}</p>
+                  <p className="text-xs text-gray-600 mt-0.5">{lang === 'ar' ? 'متاح أي وقت' : '24/7 Available'}</p>
                 </div>
               </div>
             </div>

@@ -5,7 +5,7 @@ const TopBar: React.FC = () => {
   const { lang, setLang } = useLanguage();
 
   return (
-    <div className="sticky top-0 z-50 bg-primary-dark dark:bg-gray-800 px-6 py-3 flex items-center justify-between flex-wrap gap-2.5 shadow-lg transition-colors">
+    <div className="sticky top-0 z-50 bg-primary-dark/55 backdrop-blur-md px-6 py-3 flex items-center justify-between flex-wrap gap-2.5 shadow-lg border-b border-white/10 transition-colors">
       <div className="flex items-center gap-5 flex-wrap">
         <span className="text-gold font-cond text-xl font-bold tracking-widest">ARAM ELITE</span>
         <span className="bg-green dark:bg-green-700 text-white text-xs font-bold px-2.5 py-0.5 rounded font-cond tracking-wide">
