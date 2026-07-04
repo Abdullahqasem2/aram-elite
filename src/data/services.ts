@@ -95,7 +95,7 @@ export const services: ServiceData[] = [
   },
   {
     id: 'renovation',
-    img: images.decor333,
+    img: images.renovation,
     alt: 'Villa and home renovation in Riyadh — ترميم وتجديد فلل ومنازل في الرياض',
     kicker: { en: 'Renovation & Remodeling', ar: 'الترميم والتجديد' },
     title: {
@@ -129,7 +129,7 @@ export const services: ServiceData[] = [
   },
   {
     id: 'maintenance',
-    img: images.facade,
+    img: images.maintenance,
     alt: 'Maintenance contracts for homes, villas, malls and facilities in Riyadh — عقود صيانة سنوية في الرياض',
     kicker: { en: 'Maintenance & Facility Management', ar: 'الصيانة وإدارة المرافق' },
     title: {
@@ -198,7 +198,7 @@ export const services: ServiceData[] = [
   },
   {
     id: 'sports',
-    img: images.img5589,
+    img: images.sports,
     alt: 'Sports facilities construction in Riyadh — إنشاء ملاعب ومنشآت رياضية في الرياض',
     kicker: { en: 'Sports Facilities', ar: 'المنشآت الرياضية' },
     title: {

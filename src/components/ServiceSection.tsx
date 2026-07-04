@@ -44,7 +44,11 @@ const ServiceSection: React.FC<ServiceSectionProps> = ({ service, altBg = false 
           <img
             src={service.img}
             alt={service.alt}
-            className="w-full h-56 md:h-80 object-cover hover:scale-105 transition-transform duration-700"
+            className={`w-full hover:scale-105 transition-transform duration-700 ${
+              service.id === 'design'
+                ? 'h-auto object-contain bg-black/20'
+                : 'h-56 md:h-80 object-cover'
+            }`}
             loading="lazy"
             onError={(e) => {
               (e.currentTarget.parentElement as HTMLElement).style.display = 'none';

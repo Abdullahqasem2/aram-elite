@@ -23,4 +23,8 @@ export const images = {
   img5592: '/images/IMG_5592.png',
   img5593: '/images/IMG_5593.png',
   img5594: '/images/IMG_5594.png',
+  woodCladding: '/images/wood-cladding.png',
+  renovation: '/images/renovation.png',
+  maintenance: '/images/maintenance.png',
+  sports: '/images/sports.png',
 } as const;

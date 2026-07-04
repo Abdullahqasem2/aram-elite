@@ -12,7 +12,7 @@ interface DecorService {
 
 const services: DecorService[] = [
   {
-    img: images.img5592,
+    img: images.woodCladding,
     name: 'Wood Cladding',
     nameAr: 'تكسية خشبية',
     desc: 'Premium interior & exterior wood cladding for walls, ceilings, and accent features.',
